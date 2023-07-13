@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Installing k6'
                 sh 'chmod +x setup_k6.sh'
-                sh 'apt-get -y install sudo'
+                sh 'sudo apt-get -y install sudo'
                 sh 'sudo apt-get update'
                 sh 'sudo ./setup_k6.sh'
                 echo 'Running K6 performance tests...'

@@ -4,7 +4,6 @@ pipeline {
         stage('Performance Testing') {
             steps {
                 echo 'Installing k6'
-                sh 'docker run --privileged'
                 sh 'chmod +x setup_k6.sh'
                 sh 'bash ./setup_k6.sh'
                 echo 'Running K6 performance tests...'
